@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <table border="1">
+        <tr>
+            <td>第一个数</td>
+            <td><input type="text" id="fir"></td>
+        </tr>
+        <tr>
+            <td>第二个数</td>
+            <td><input type="text" id="sec"></td>
+        </tr>
+        <tr>
+            <td colspan="1">
+                <button type="button" onclick="add()">+</button>
+                <button type="button" onclick="substract()">-</button>
+                <button type="button" onclick="multiply()">*</button>
+                <button type="button" onclick="divide()">\</button>
+                <button type="button" onclick="pingfang()">平方</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p id="rest"> </p>
+            </td>
+        </tr>
+        </table>
+        <script> 
+                var res;  
+                function add() 
+                { 
+                    var first = document.getElementById("fir").value; 
+                    var second = document.getElementById("sec").value;  
+                    res =Number(first) + Number(second); 
+                    sent(res);
+                 }    
+                function substract() 
+                {
+                    var first = document.getElementById("fir").value; 
+                    var second = document.getElementById("sec").value;  
+                    res = first - second;  
+                    sent(res); 
+                }    
+                function multiply() 
+                {
+                    var first = document.getElementById("fir").value; 
+                    var second = document.getElementById("sec").value;  
+                    res = first * second;  
+                    sent(res); 
+                }    
+                function divide() 
+                {
+                    var first = document.getElementById("fir").value; 
+                    var second = document.getElementById("sec").value;  
+                    res = first / second; 
+                    sent(res); 
+                    
+                }   
+                function pingfang()
+                {
+                    var first=document.getElementById("fir").value;
+                    res= first*first;
+                    sent(res);
+                }
+                function sent(re) 
+                {  
+                    document.getElementById("rest").innerHTML = re; 
+                } 
+                </script> 
+    </body>
+</html>
