@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 遍历子字符串</title>
+    </head>
+    <body>
+        <script>
+            function myfin()
+            {
+                var str=document.getElementById("myinput").value;
+                var a=str.split('');
+                for(var i=0;i<a.length;i++)
+                {
+                    document.write(a[i]);
+                    document.write('<br/>');
+                }
+            }
+        </script>
+        <p><input type="text" value="" id="myinput"></p>
+        <button onclick="myfin()">遍历</button>
+    </body>
+</html>
